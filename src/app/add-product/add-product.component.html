@@ -1,0 +1,32 @@
+
+<h1 class="text-center">Add product</h1>
+<div class="row">
+    <div class="col-sm-2 col-md-3"></div>
+    <div class="col-sm-8 col-md-6">
+        <form [formGroup]="productData" (submit)="createProduct()">
+          <div class="mb-3">
+            <label  class="form-label">Product Name</label>
+            <input type="text" class="form-control" id="name"  formControlName="name">
+          </div>
+            <div class="mb-3">
+              <label  class="form-label">Brand </label>
+              <input type="text" class="form-control" id="brand"  formControlName="brand">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">Price</label>
+              <input type="text" class="form-control" id="price" formControlName="price">
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Rating</label>
+                <input type="text" class="form-control" id="rating" formControlName="rating">
+              </div>
+              <div class="mb-3">
+                <label  class="form-label">Image link</label>
+                <input type="text" class="form-control" id="image"  formControlName="image">
+              </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </form>
+    </div>
+    <div class="col-sm-2 col-md-3"></div>
+</div>
+

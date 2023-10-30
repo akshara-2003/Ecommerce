@@ -1,0 +1,32 @@
+<h1 class="text-center">Registration Form</h1>
+<div class="row">
+    <div class="col-sm-2 col-md-3"></div>
+    <div class="col-sm-8 col-md-6">
+        <form [formGroup]="userData" (submit)="createUser()">
+          <div class="mb-3">
+            <label for="un" class="form-label">Name</label>
+            <input type="text" class="form-control" id="un" name="username" formControlName="name">
+          </div>
+            <div class="mb-3">
+              <label for="un" class="form-label">Username</label>
+              <input type="text" class="form-control" id="un" name="username" formControlName="username">
+            </div>
+            <div class="mb-3">
+              <label for="pw" class="form-label">Password</label>
+              <input type="password" class="form-control" id="pw" name="password" formControlName="password">
+              <span style="color: red;" *ngIf="userData.get('password')?.dirty && !userData.get('password')?.valid">Please enter valid password</span>
+            </div>
+            <div class="mb-3">
+                <label for="em" class="form-label">Email</label>
+                <input type="email" class="form-control" id="em" name="email" formControlName="email">
+              </div>
+              <div class="mb-3">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" name="dob" formControlName="dob">
+              </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+    </div>
+    <div class="col-sm-2 col-md-3"></div>
+</div>
+

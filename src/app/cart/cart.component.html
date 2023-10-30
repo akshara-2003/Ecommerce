@@ -1,0 +1,13 @@
+<h2>Cart</h2>
+<div class="cont" >
+    <div class="card"*ngFor="let item of cartItems" style="width: 18rem;">
+        <img src="{{item.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">{{item.price| currency}}</p>
+          <p class="card-text">Rating:{{item.Rating}}</p>
+          <button class="btn btn-danger" (click)="removeFromCart(item)">Remove from Cart</button>
+        </div>
+      </div>
+</div>
+<p>Total Price: {{ total | currency }}</p>

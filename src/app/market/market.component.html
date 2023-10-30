@@ -1,0 +1,12 @@
+<h1 class="">Market</h1>
+<div class="cont" >
+    <div class="card"*ngFor="let x of productData" style="width: 18rem;">
+        <img src="{{x.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{x.name}}</h5>
+          <p class="card-text">Price:{{x.price}}</p>
+          <p class="card-text">Rating:{{x.Rating}}</p>
+          <button  class="btn btn-primary" (click)="addToCart(x)">Add to cart</button>
+        </div>
+      </div>
+</div>
